@@ -11,18 +11,35 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".JobSchedulerExample">
+        <activity android:name=".ContentProviderExample">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ToastSnackbarActivity"></activity>
-        <activity android:name=".MainActivity"></activity>
-        <service android:name=".ExampleJobService"
-            android:permission="android.permission.BIND_JOB_SERVICE"
-            android:exported="true"/>
+
+        <provider
+            android:name=".StudentsProvider"
+            android:authorities="com.example.android_developer_certification_tutorial.StudentsProvider" />
+
+        <activity android:name=".SendBroadcastActivity"></activity>
+
+        <receiver android:name=".BroadcastReceiverExample">
+            <intent-filter>
+                <action android:name="com.CUSTOM_INTENT" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".JobSchedulerExample"></activity>
+        <activity android:name=".ToastSnackbarActivity" />
+        <activity android:name=".MainActivity" />
+
+        <service
+            android:name=".ExampleJobService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
     </application>
 
 </manifest>
