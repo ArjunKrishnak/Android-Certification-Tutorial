@@ -1,4 +1,4 @@
-package com.example.android_developer_certification_tutorial;
+package com.example.android_developer_certification_tutorial.BroadcastReciever;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.content.BroadcastReceiver;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import com.example.android_developer_certification_tutorial.R;
 
 public class SendBroadcastActivity extends AppCompatActivity {
 

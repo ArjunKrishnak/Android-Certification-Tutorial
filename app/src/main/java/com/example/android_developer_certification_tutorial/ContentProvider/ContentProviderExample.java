@@ -1,4 +1,4 @@
-package com.example.android_developer_certification_tutorial;
+package com.example.android_developer_certification_tutorial.ContentProvider;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.android_developer_certification_tutorial.R;
 
 public class ContentProviderExample extends AppCompatActivity {
 
@@ -21,12 +23,12 @@ public class ContentProviderExample extends AppCompatActivity {
         // Add a new student record
         ContentValues values = new ContentValues();
         values.put(StudentsProvider.NAME,
-                ((EditText)findViewById(R.id.StudentText )).getText().toString());
+                ((EditText)findViewById(R.id.NameEditText )).getText().toString());
 
         values.put(StudentsProvider.GRADE,
-                ((EditText)findViewById(R.id.GradeText)).getText().toString());
+                ((EditText)findViewById(R.id.AgeEfitText )).getText().toString());
 
-        Uri uri = getContentResolver().insert(
+        Uri uri = getContentResolver().insert(//Content Providers are triggered by content resolvers and not intents
                 StudentsProvider.CONTENT_URI, values);
 
         Toast.makeText(getBaseContext(),
@@ -34,10 +36,11 @@ public class ContentProviderExample extends AppCompatActivity {
     }
     public void onClickRetrieveStudents(View view) {
         // Retrieve student records
-        String URL = "content://com.example.android_developer_certification_tutorial.StudentsProvider";
+        String URL = "content://com.example.android_developer_certification_tutorial.ContentProvider.StudentsProvider";
 
         Uri students = Uri.parse(URL);
-        Cursor c = managedQuery(students, null, null, null, "name");
+        Cursor c =  getContentResolver().query(students,null,null,null,"name");
+//        Cursor c = managedQuery(students, null, null, null, "name");
 
         if (c.moveToFirst()) {
             do{
@@ -51,10 +54,10 @@ public class ContentProviderExample extends AppCompatActivity {
     }
     public void onClickDeleteStudent(View view){
         // delete a student record
-        String URL = "content://com.example.android_developer_certification_tutorial.StudentsProvider";
+        String URL = "content://com.example.android_developer_certification_tutorial.ContentProvider.StudentsProvider";
         Uri students = Uri.parse(URL);
 
-        String SName = ((EditText)findViewById(R.id.StudentText )).getText().toString();
+        String SName = ((EditText)findViewById(R.id.NameEditText )).getText().toString();
         int success = getContentResolver().delete( StudentsProvider.CONTENT_URI,StudentsProvider.NAME + "=" + "\"" +SName+"\"",
                 null);
         Toast.makeText(this,SName+"deleted"+ success, Toast.LENGTH_SHORT).show();
@@ -64,11 +67,11 @@ public class ContentProviderExample extends AppCompatActivity {
         // update a student record
         ContentValues values = new ContentValues();
         values.put(StudentsProvider.NAME,
-                ((EditText)findViewById(R.id.StudentText )).getText().toString());
+                ((EditText)findViewById(R.id.NameEditText )).getText().toString());
 
         values.put(StudentsProvider.GRADE,
-                ((EditText)findViewById(R.id.GradeText)).getText().toString());
-        String SName = ((EditText)findViewById(R.id.StudentText )).getText().toString();
+                ((EditText)findViewById(R.id.AgeEfitText )).getText().toString());
+        String SName = ((EditText)findViewById(R.id.NameEditText )).getText().toString();
         int success = getContentResolver().update(StudentsProvider.CONTENT_URI, values,
                 StudentsProvider.NAME + " = " +"\""+ SName+"\"",null);
 

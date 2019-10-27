@@ -1,4 +1,4 @@
-package com.example.android_developer_certification_tutorial;
+package com.example.android_developer_certification_tutorial.ToastandSnackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.android_developer_certification_tutorial.R;
 import com.google.android.material.snackbar.Snackbar;
 
 public class ToastSnackbarActivity extends AppCompatActivity {

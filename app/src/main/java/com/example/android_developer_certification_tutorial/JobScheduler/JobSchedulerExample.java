@@ -1,4 +1,4 @@
-package com.example.android_developer_certification_tutorial;
+package com.example.android_developer_certification_tutorial.JobScheduler;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,8 @@ import android.os.PersistableBundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+
+import com.example.android_developer_certification_tutorial.R;
 
 public class JobSchedulerExample extends AppCompatActivity {
     private static final String TAG = "MainActivity";

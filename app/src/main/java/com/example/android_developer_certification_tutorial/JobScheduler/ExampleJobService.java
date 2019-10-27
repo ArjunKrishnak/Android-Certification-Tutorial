@@ -1,8 +1,8 @@
-package com.example.android_developer_certification_tutorial;
+package com.example.android_developer_certification_tutorial.JobScheduler;
 
 import android.app.job.JobParameters;
-        import android.app.job.JobService;
-        import android.util.Log;
+import android.app.job.JobService;
+import android.util.Log;
 
 
 

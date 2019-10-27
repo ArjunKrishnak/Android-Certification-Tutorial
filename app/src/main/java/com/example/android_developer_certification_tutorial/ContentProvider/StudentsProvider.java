@@ -1,4 +1,4 @@
-package com.example.android_developer_certification_tutorial;
+package com.example.android_developer_certification_tutorial.ContentProvider;
 
 
 import android.content.ContentProvider;
@@ -17,7 +17,7 @@ import android.text.TextUtils;
 import java.util.HashMap;
 
 public class StudentsProvider extends ContentProvider {
-    static final String PROVIDER_NAME = "com.example.android_developer_certification_tutorial.StudentsProvider";
+    static final String PROVIDER_NAME = "com.example.android_developer_certification_tutorial.ContentProvider.StudentsProvider";
     static final String URL = "content://" + PROVIDER_NAME + "/students";
     static final Uri CONTENT_URI = Uri.parse(URL);
 

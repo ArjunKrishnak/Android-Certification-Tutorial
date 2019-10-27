@@ -1,4 +1,4 @@
-package com.example.android_developer_certification_tutorial;
+package com.example.android_developer_certification_tutorial.BroadcastReciever;
 
 
 import android.content.BroadcastReceiver;
