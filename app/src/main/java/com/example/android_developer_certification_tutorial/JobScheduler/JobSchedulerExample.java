@@ -14,7 +14,7 @@ import android.widget.TextView;
 import com.example.android_developer_certification_tutorial.R;
 
 public class JobSchedulerExample extends AppCompatActivity {
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "NavActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

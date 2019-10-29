@@ -1,10 +1,12 @@
-package com.example.android_developer_certification_tutorial;
+package com.example.android_developer_certification_tutorial.Navigation;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.android_developer_certification_tutorial.R;
+
+public class NavActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

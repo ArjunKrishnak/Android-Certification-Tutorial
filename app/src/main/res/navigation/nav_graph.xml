@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/firstNavFragment">
+
+    <fragment
+        android:id="@+id/firstNavFragment"
+        android:name="com.example.android_developer_certification_tutorial.Navigation.FirstNavFragment"
+        android:label="fragment_first_nav"
+        tools:layout="@layout/fragment_first_nav" >
+        <action
+            android:id="@+id/action_firstNavFragment_to_secondNavFragment"
+            app:destination="@id/secondNavFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim" />
+        <argument
+            android:name="InputToFirstNavFrag"
+            app:argType="string"
+            android:defaultValue='"Hi im from SecondNavFrag"' />
+    </fragment>
+    <fragment
+        android:id="@+id/secondNavFragment"
+        android:name="com.example.android_developer_certification_tutorial.Navigation.SecondNavFragment"
+        android:label="fragment_second_nav"
+        tools:layout="@layout/fragment_second_nav" >
+        <action
+            android:id="@+id/action_secondNavFragment_to_firstNavFragment"
+            app:destination="@id/firstNavFragment"
+            app:enterAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+</navigation>
