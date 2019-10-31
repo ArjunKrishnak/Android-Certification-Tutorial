@@ -5,7 +5,6 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,17 +12,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <uses-library android:name="android.test.runner"
+        <activity android:name=".CustomViews.CustomViewActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".RecyclerView.RecyclerViewActivity" />
+
+        <uses-library
+            android:name="android.test.runner"
             android:required="false" />
-        <activity android:name=".Testing.ExampleTestActivity"></activity>
-        <activity android:name=".Room.RoomActivity"></activity>
+
+        <activity android:name=".Testing.ExampleTestActivity" />
+        <activity android:name=".Room.RoomActivity" />
 
         <service
             android:name=".ForegroundService.ForegroundServiceExample"
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".ForegroundService.ForegroundServiceActivity"></activity>
+        <activity android:name=".ForegroundService.ForegroundServiceActivity" />
         <activity android:name=".AlarmManager.AlarmManagerActivity" />
 
         <service
@@ -38,14 +48,14 @@
             android:exported="true"
             android:permission="android.permission.BIND_JOB_SERVICE" />
 
-        <activity android:name=".Notification.NotificationExample"></activity>
+        <activity android:name=".Notification.NotificationExample" />
         <activity android:name=".ContentProvider.ContentProviderExample" />
 
         <provider
             android:name=".ContentProvider.StudentsProvider"
             android:authorities="com.example.android_developer_certification_tutorial.ContentProvider.StudentsProvider" />
 
-        <activity android:name=".BroadcastReciever.SendBroadcastActivity"></activity>
+        <activity android:name=".BroadcastReciever.SendBroadcastActivity" />
 
         <receiver android:name=".BroadcastReciever.BroadcastReceiverExample">
             <intent-filter>
@@ -69,11 +79,6 @@
         <activity android:name=".JobScheduler.JobSchedulerExample" />
         <activity android:name=".ToastandSnackbar.ToastSnackbarActivity" />
         <activity android:name=".Navigation.NavActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <service
