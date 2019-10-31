@@ -38,4 +38,28 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light" />
 
+    <style name="FirstTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorTheme1</item>
+        <item name="colorPrimaryDark">@color/colorTheme1</item>
+        <item name="colorAccent">@color/colorTheme1</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="SecondTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorTheme2</item>
+        <item name="colorPrimaryDark">@color/colorTheme2</item>
+        <item name="colorAccent">@color/colorTheme2</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="ThirdTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorTheme3</item>
+        <item name="colorPrimaryDark">@color/colorTheme3</item>
+        <item name="colorAccent">@color/colorTheme3</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
 </resources>
