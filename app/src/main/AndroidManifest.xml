@@ -12,15 +12,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ThemesandSharedpreferences.Themes_Activity">
+        <activity android:name=".OrientationChange.OrientationChange">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CustomViews.CustomViewActivity">
+        <activity android:name=".AsyncTaskExample.AsyncTaskActivity">
         </activity>
+        <activity android:name=".ThemesandSharedpreferences.Themes_Activity"></activity>
+        <activity android:name=".CustomViews.CustomViewActivity" />
         <activity android:name=".RecyclerView.RecyclerViewActivity" />
 
         <uses-library
@@ -80,7 +82,7 @@
 
         <activity android:name=".JobScheduler.JobSchedulerExample" />
         <activity android:name=".ToastandSnackbar.ToastSnackbarActivity" />
-        <activity android:name=".Navigation.NavActivity"></activity>
+        <activity android:name=".Navigation.NavActivity" />
 
         <service
             android:name=".JobScheduler.ExampleJobService"
